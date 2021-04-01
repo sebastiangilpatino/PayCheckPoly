@@ -1,6 +1,6 @@
 package LAB51;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class Application {
 
 	public static void main(String[] args) {
 		final int year = 2020;
-		LocalDateTime orderDate = LocalDateTime.now();
+		LocalDate orderDate = LocalDate.now();
 
 		List<Employee> employees = new ArrayList<Employee>();
 		employees.add(new Hourly(1, 12, 40));

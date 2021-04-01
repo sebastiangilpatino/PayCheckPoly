@@ -1,14 +1,14 @@
 package LAB51;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Order {
 	private int orderNo;
-	private LocalDateTime orderDate;
+	private LocalDate orderDate;
 	private double orderAmount;
 	private Comissioned comissioned;
 
-	public Order(int orderNo, LocalDateTime orderDate, double orderAmount) {
+	public Order(int orderNo, LocalDate orderDate, double orderAmount) {
 		super();
 		this.orderNo = orderNo;
 		this.orderDate = orderDate;

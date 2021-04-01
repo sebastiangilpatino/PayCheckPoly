@@ -27,6 +27,10 @@ public final class Paycheck {
 
 	}
 
+	public Employee getEmployee() {
+		return emp;
+	}
+
 	public double getNetPay() {
 		return grossPay - fica - state - local - medicare - socialSecurity;
 	}

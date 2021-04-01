@@ -1,7 +1,6 @@
 package LAB51;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +29,9 @@ public abstract class Employee {
 	}
 
 	public Paycheck calcCompensation(int month, int year) {
-		final int hourMinute = 00;
-		LocalDateTime startDate = LocalDateTime.of(year, month, 1, hourMinute, hourMinute);
-		LocalDate lastDay = startDate.toLocalDate();
-		LocalDateTime endDate = LocalDateTime.of(year, month, lastDay.lengthOfMonth(), hourMinute, hourMinute);
+		LocalDate startDate = LocalDate.of(year, month, 1);
+		LocalDate endDate = LocalDate.of(year, month, startDate.lengthOfMonth());
+
 		double grossPay = calcGrossPay(new DateRange(startDate, endDate));
 		Paycheck payment = new Paycheck(grossPay, grossPay * fica, grossPay * state, grossPay * local,
 				grossPay * medicare, grossPay * social);
